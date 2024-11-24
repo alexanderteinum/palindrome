@@ -33,7 +33,13 @@ function App() {
 }
 
 function PalindromeResult({ result }) {
-  return result && <div><p>{result}</p></div>;
+  return (
+    result && (
+      <div>
+        <p>{result}</p>
+      </div>
+    )
+  );
 }
 
 export default App;

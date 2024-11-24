@@ -1,7 +1,6 @@
 const reverseString = (str) => str.split("").reverse().join("");
 
-const cleanString = (str) =>
-  str.toLowerCase().replace(/[^a-z0-9]/g, "");
+const cleanString = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, "");
 
 const isPalindromeSentence = (str) => {
   const cleaned = cleanString(str);
