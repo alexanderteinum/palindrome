@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { checkPalindrome} from "./utility.jsx";
+import { checkPalindrome } from "./utility.jsx";
 import "./App.css";
 
 function App() {
