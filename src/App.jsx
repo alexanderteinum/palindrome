@@ -32,7 +32,6 @@ function App() {
   );
 }
 
-// Result Component
 function PalindromeResult({ result }) {
   return result && <div><p>{result}</p></div>;
 }
