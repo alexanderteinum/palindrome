@@ -1,42 +1,40 @@
 import { useState } from "react";
+import { checkPalindrome} from "./utility.jsx";
 import "./App.css";
-
-function reverseString(str) {
-  return str.split("").reverse().join("");
-}
-
-function checkPalindrome(str) {
-  if (str.trim().length === 0) {
-    return "String is empty";
-  }
-  return str.toLowerCase() === reverseString(str).toLowerCase()
-    ? "Yes, it's a palindrome!"
-    : "No, not a palindrome.";
-}
 
 function App() {
   const [name, setName] = useState("");
+  const [isSentenceMode, setSentenceMode] = useState(false);
 
   return (
     <>
-      <h1>PalindromeChecker</h1>
-      <label>Name</label>
-      <input
-        placeholder="Type in your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <PalindromeResult result={checkPalindrome(name)} />
+      <h1>Palindrome Checker</h1>
+      <div>
+        <label htmlFor="input-name">Name</label>
+        <input
+          id="input-name"
+          placeholder="Type in your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="sentence-mode">Sentence mode</label>
+        <input
+          id="sentence-mode"
+          type="checkbox"
+          checked={isSentenceMode}
+          onChange={() => setSentenceMode((prev) => !prev)}
+        />
+      </div>
+      <PalindromeResult result={checkPalindrome(name, isSentenceMode)} />
     </>
   );
 }
 
+// Result Component
 function PalindromeResult({ result }) {
-  return (
-    <div className="result">
-      {result && <p>{result}</p>}
-    </div>
-  );
+  return result && <div><p>{result}</p></div>;
 }
 
 export default App;
