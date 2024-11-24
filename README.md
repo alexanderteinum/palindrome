@@ -1,3 +1,3 @@
 # Palindrome
 
-Figures out if name is a palindrome or not.
+Determines whether name is a palindrome or not.
