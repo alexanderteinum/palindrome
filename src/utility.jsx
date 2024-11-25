@@ -17,6 +17,6 @@ export const checkPalindrome = (str, isSentenceMode) => {
     : trimmed.toLowerCase() === reverseString(trimmed.toLowerCase());
 
   return isPalindrome
-    ? `Yes, it's a palindrome!${isSentenceMode ? " (Sentence mode)" : ""}`
+    ? `Yes, it's a palindrome! 🦑${isSentenceMode ? " (Sentence mode)" : ""}`
     : `No, not a palindrome.${isSentenceMode ? " (Sentence mode)" : ""}`;
 };

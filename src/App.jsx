@@ -36,7 +36,7 @@ function PalindromeResult({ result }) {
   return (
     result && (
       <div>
-        <p>{result}</p>
+        <p className="text-3xl text-blue-500">{result}</p>
       </div>
     )
   );
